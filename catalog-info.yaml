@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: wjahyd8lg-python-gitops
+  description: This is GitOps manifest for wjahyd8lg-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: wjahyd8lg-python
+    backstage.io/kubernetes-id: wjahyd8lg-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: wjahyd8lg-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:wjahyd8lg-python
